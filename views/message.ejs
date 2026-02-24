@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+
+    <h1><a href="/new"><button>Add a new message</button></a></h1>
+    <% messages.forEach((message, index)=> {%>
+        <li>
+            <%= message.text %>
+                <a href="/<%= index %>"><button>Open</button></a>
+
+        </li>
+
+        <%})%>
+</body>
+
+</html>
