@@ -1,6 +1,7 @@
 import express from "express";
 import path from "path";
 import { indexRouter } from "./routes/index.routes.js";
+import { newMessageRouter } from "./routes/newMessage.routes.js";
 
 
 const app = express();
@@ -11,6 +12,7 @@ app.set("view engine", "ejs");
 
 app.use(express.urlencoded({ extended: true }));
 
+app.use("/new", newMessageRouter);
 app.use("/", indexRouter);
 
 
